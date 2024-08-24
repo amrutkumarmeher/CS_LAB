@@ -1,37 +1,42 @@
-class Stack{
+class Stack {
     private int topIndex;
     private int self[];
     private int capaci;
-    Stack(int capacity){
+
+    Stack(int capacity) {
         capaci = capacity;
         self = new int[capacity];
         topIndex = -1;
     }
-    private boolean stackoverflow(){
-        if(topIndex+1 != capaci){
+
+    private boolean stackoverflow() {
+        if (topIndex + 1 != capaci) {
             return false;
         } else {
             return true;
         }
     }
-    private boolean stackunderflow(){
-        if(topIndex >= 0){
+
+    private boolean stackunderflow() {
+        if (topIndex >= 0) {
             return false;
         } else {
             return true;
         }
     }
-    void push(int item){
-        if(stackoverflow() == true){
+
+    void push(int item) {
+        if (stackoverflow() == true) {
             System.err.println("Stack OverFlow!");
         } else {
             topIndex = topIndex + 1;
             self[topIndex] = item;
         }
     }
-    int pop(){
+
+    int pop() {
         int item;
-        if(stackunderflow() == true){
+        if (stackunderflow() == true) {
             System.err.println("Stack UnderFlow!");
             return 0;
         } else {
@@ -40,9 +45,10 @@ class Stack{
             return item;
         }
     }
-    int peek(){
+
+    int peek() {
         int item;
-        if(stackunderflow() == true){
+        if (stackunderflow() == true) {
             System.err.println("Stack Is Empty");
             return 0;
         } else {
@@ -51,87 +57,92 @@ class Stack{
         }
     }
 }
+
 public class expression {
-    static boolean ItsOperator(char token){
+    static boolean ItsOperator(String token) {
         // if operator: true
-        // else:        falso
-        if(token=='+' || token=='-' || token=='*' || token=='/' || token=='%'){
+        // else: false
+        if (token.charAt(0) == "+".charAt(0) || token.charAt(0) == "-".charAt(0) || token.charAt(0) == "*".charAt(0)
+                || token.charAt(0) == "/".charAt(0) || token.charAt(0) == "%".charAt(0)) {
             return true;
         } else {
             return false;
         }
     }
-    static int charToIn(char ch){
-        if (ch == '1') {
-            return 1;
+
+    static int StrToInt(String str) {
+        int Strli[] = new int[str.length()];
+        int i; // iterator
+        int sum = 0;
+        int pwr = 1;
+        for (i = 0; i < Strli.length; i++) {
+            Strli[i] = str.charAt(i) - 48;
         }
-        else if(ch == '2'){
-            return 2;
+        // temp loop
+        i = i - 1;
+        for (; i >= 0; i--) {
+            Strli[i] = Strli[i] * pwr;
+            pwr = pwr * 10;
         }
-        else if(ch == '3'){
-            return 3;
+        for (i = 0; i < Strli.length; i++) {
+            sum = sum + Strli[i];
         }
-        else if(ch == '4'){
-            return 4;
-        }
-        else if(ch == '5'){
-            return 5;
-        }
-        else if(ch == '6'){
-            return 6;
-        }
-        else if(ch == '7'){
-            return 7;
-        }
-        else if(ch == '8'){
-            return 8;
-        }
-        else if(ch == '9'){
-            return 9;
-        }
-        else{
-            return 0;
-        }
-        
+        return sum;
     }
-    static int operation(char operator, int op1, int op2){
-        if(operator=='+'){
+
+    static int operation(String operator, int op1, int op2) {
+        if (operator.charAt(0) == "+".charAt(0)) {
             return op1 + op2;
-        }
-        else if(operator=='-'){
+        } else if (operator.charAt(0) == "-".charAt(0)) {
             return op1 - op2;
-        }
-        else if(operator=='/'){
+        } else if (operator.charAt(0) == "/".charAt(0)) {
             return op1 / op2;
-        }
-        else if(operator=='%'){
-            return op1%op2;
-        }
-        else if(operator=='*'){
+        } else if (operator.charAt(0) == "%".charAt(0)) {
+            return op1 % op2;
+        } else if (operator.charAt(0) == "*".charAt(0)) {
             return op1 * op2;
-        }
-        else {
+        } else {
             return 0;
         }
     }
-    static int resultPostfix(String expre){
-        Stack operandStack = new Stack(5);
+
+    static int resultPostfix(String expre) {
+        int i; // iterator variable
+        String tokens[] = expre.split(" ");
+        Stack OperandStack = new Stack(10);
         int operand1;
         int operand2;
-        for (int i = 0; i < expre.length(); i++) {
-            if(ItsOperator(expre.charAt(i))){
-                operand2 = operandStack.pop();
-                operand1 = operandStack.pop();
-                operandStack.push(operation(expre.charAt(i), operand1, operand2));
-            }
-            else {
-                operandStack.push(charToIn(expre.charAt(i)));
+        for (i = 0; i < tokens.length; i++) {
+            if (ItsOperator(tokens[i])) {
+                operand2 = OperandStack.pop();
+                operand1 = OperandStack.pop();
+                OperandStack.push(operation(tokens[i], operand1, operand2));
+            } else {
+                OperandStack.push(StrToInt(tokens[i]));
             }
         }
-        return operandStack.peek();
+        return OperandStack.peek();
+    }
+
+    static int resultPrefix(String expre){
+        int i; // iterator variable
+        String tokens[] = expre.split(" ");
+        Stack OperandStack = new Stack(10);
+        int operand1;
+        int operand2;
+        for (i = tokens.length-1; i >= 0; i--) {
+            if (ItsOperator(tokens[i])) {
+                operand1 = OperandStack.pop();
+                operand2 = OperandStack.pop();
+                OperandStack.push(operation(tokens[i], operand1, operand2));
+            } else {
+                OperandStack.push(StrToInt(tokens[i]));
+            }
+        }
+        return OperandStack.peek();
     }
     public static void main(String[] args) {
-        int i = resultPostfix("234*+");
+        int i = resultPrefix("- 5 1");
         System.out.println(""+i);
     }
 }
