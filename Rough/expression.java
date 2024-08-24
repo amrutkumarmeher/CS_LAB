@@ -71,6 +71,7 @@ public class expression {
     }
 
     static int StrToInt(String str) {
+        // Covert String(numberic) to integer.
         int Strli[] = new int[str.length()];
         int i; // iterator
         int sum = 0;
@@ -124,13 +125,13 @@ public class expression {
         return OperandStack.peek();
     }
 
-    static int resultPrefix(String expre){
+    static int resultPrefix(String expre) {
         int i; // iterator variable
         String tokens[] = expre.split(" ");
         Stack OperandStack = new Stack(10);
         int operand1;
         int operand2;
-        for (i = tokens.length-1; i >= 0; i--) {
+        for (i = tokens.length - 1; i >= 0; i--) {
             if (ItsOperator(tokens[i])) {
                 operand1 = OperandStack.pop();
                 operand2 = OperandStack.pop();
@@ -141,8 +142,9 @@ public class expression {
         }
         return OperandStack.peek();
     }
+
     public static void main(String[] args) {
         int i = resultPrefix("- 5 1");
-        System.out.println(""+i);
+        System.out.println("" + i);
     }
 }
