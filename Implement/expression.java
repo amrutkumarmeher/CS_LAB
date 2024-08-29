@@ -144,7 +144,7 @@ public class expression {
     }
 
     public static void main(String[] args) {
-        int i = resultPrefix("- + 5 6 10");
+        int i = resultPrefix("+ - 3 4 / 6 8");
         System.out.println("" + i);
     }
 }
