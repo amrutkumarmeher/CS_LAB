@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // WAP to make a class with some static members
 class Aclass{
     static int a = 10;
@@ -12,3 +13,10 @@ public class Program16 {
         Aclass.hey();
     }
 }
+=======
+public class Program16 {
+    public static void main(String[] args) {
+        
+    }
+}
+>>>>>>> 75b82e3897a9a40b3f38e86e88e4b20aa29c3846

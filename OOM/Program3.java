@@ -7,5 +7,6 @@ public class Program3{
     System.out.println("Enter the number");
     int num = reader.nextInt();
     System.out.println("The number is: "+num);
+    reader.close();
     }
 }
