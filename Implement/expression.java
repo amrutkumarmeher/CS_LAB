@@ -1,3 +1,4 @@
+import java.util.Scanner;
 class Stack {
     private int topIndex;
     private int self[];
@@ -144,7 +145,11 @@ public class expression {
     }
 
     public static void main(String[] args) {
-        int i = resultPrefix("+ - 3 4 / 6 8");
-        System.out.println("" + i);
+        Scanner scan = new Scanner(System.in);
+        while (true){
+        System.out.println("Enter an expression(postfix)");
+        int i = resultPostfix(scan.nextLine());
+        System.out.println("Result is "+i);
+    }
     }
 }
