@@ -12,5 +12,6 @@ public class Program6 {
         a = b;
         b = temp;
         System.out.println("After Swapper a="+a+" and b="+b);
+        scan.close();
     }
 }

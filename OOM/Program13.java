@@ -1,8 +1,8 @@
 //WAP to declare two member in a class, use constructor to assign value & show.
-class Aclass{
+class Bclass{
     int a;
     int b;
-    Aclass(){
+    Bclass(){
         a = 10;
         b = 20;
     }
@@ -12,7 +12,7 @@ class Aclass{
 }
 public class Program13{
     public static void main(String[] args) {
-        Aclass obj = new Aclass();
+        Bclass obj = new Bclass();
         obj.display();
     }
 }

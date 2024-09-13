@@ -9,5 +9,6 @@ public class Program4{
         float radius = scan.nextFloat();
         float area = (22*radius*radius)/7;
         System.out.println("The accurate area is: "+area+" m^2");
+        scan.close();
     }
 }

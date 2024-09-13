@@ -1,5 +1,5 @@
 // WAP to declare int a,b & float c inside a class, use two sum function & display them.
-class Aclass{
+class Cclass{
     int a,b;
     float c;
     int sum(int i, int j){
@@ -15,7 +15,7 @@ class Aclass{
 }
 public class Program14{
     public static void main(String[] args) {
-        Aclass obj = new Aclass();
+        Cclass obj = new Cclass();
         System.out.println("10 + 20 = "+obj.sum(10, 20));
         System.out.println("10 + 5.5 = "+obj.sum(10, 5.5f));
     }

@@ -1,6 +1,5 @@
-<<<<<<< HEAD
 // WAP to make a class with some static members
-class Aclass{
+class Eclass{
     static int a = 10;
     static int b = 10;
     static void hey(){
@@ -9,14 +8,7 @@ class Aclass{
 }
 public class Program16 {
     public static void main(String [] args){
-        System.out.println("a= "+Aclass.a+" b= "+Aclass.b);
-        Aclass.hey();
+        System.out.println("a= "+Eclass.a+" b= "+Eclass.b);
+        Eclass.hey();
     }
 }
-=======
-public class Program16 {
-    public static void main(String[] args) {
-        
-    }
-}
->>>>>>> 75b82e3897a9a40b3f38e86e88e4b20aa29c3846

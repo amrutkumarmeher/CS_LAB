@@ -15,5 +15,6 @@ public class Program9 {
         } else {
             System.out.println(a+" is smaller than "+b);
         }
+        scan.close();
     }
 }

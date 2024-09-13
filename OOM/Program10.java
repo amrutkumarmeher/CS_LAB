@@ -21,6 +21,7 @@ public class Program10 {
         System.out.println("Enter a number");
         int num = scan.nextInt();
         System.out.println("Its binary is\n"+decToBin(num));
+        scan.close();
     }
     
 }

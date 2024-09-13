@@ -10,5 +10,6 @@ public class Program7 {
         } else {
             System.out.println("The number "+num+" is odd");
         }
+        scan.close();
     }
 }
