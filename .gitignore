@@ -1,4 +1,5 @@
 .idea
-.class
-.exe
-.vscode
+*.class
+*.exe
+*.vscode
+*.xml
