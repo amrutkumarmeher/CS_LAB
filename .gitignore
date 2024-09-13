@@ -1,5 +1,4 @@
-*.exe
-*.class
-*rough.*
-*.xml
-*.iml
+.idea
+.class
+.exe
+.vscode
