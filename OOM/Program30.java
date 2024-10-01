@@ -4,7 +4,7 @@ class superclassA{
         System.out.println("I am superclass constructor");
     }
 }
-class subclassB{
+class subclassB extends superclassA{
     subclassB(){
         System.out.println("I am subclassB constructor");
     }
