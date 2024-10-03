@@ -1,10 +1,10 @@
-// WAP to class superclass constructor using super keyword
+// WAP to call superclass constructor using super keyword
 class superclassA{
     superclassA(){
         System.out.println("I am superclass constructor");
     }
 }
-class subclassB{
+class subclassB extends superclassA{
     subclassB(){
         System.out.println("I am subclassB constructor");
     }
