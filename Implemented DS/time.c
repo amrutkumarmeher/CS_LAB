@@ -8,6 +8,7 @@ struct time
     int seconds;
 };
 struct time StrToTim(char *s)
+// format: hrs:min:sec
 {
     struct time t;
     t.hours = ((((int)s[0]) - 48) * 10) + ((((int)s[1]) - 48) * 1);
@@ -16,6 +17,7 @@ struct time StrToTim(char *s)
     return t;
 }
 struct time addTime(char *a, char *b)
+// format: hrs:min:sec
 {
     struct time timeSum;
     timeSum.hours = ((((int)a[0]) - 48) * 10) + ((((int)a[1]) - 48) * 1) + ((((int)b[0]) - 48) * 10) + ((((int)b[1]) - 48) * 1);
@@ -44,4 +46,5 @@ struct time addTime(char *a, char *b)
 
 int main()
 {
+    
 }

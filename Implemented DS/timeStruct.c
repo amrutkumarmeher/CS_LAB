@@ -145,9 +145,9 @@ int main()
             printf("Hours: %d & Minutes: %d & Seconds: %d\n",t.hours,t.minutes,t.seconds);
         }
         else if (opn[0]=='2'){
-            printf("Enter first timeing \n");
+            printf("Enter first timing \n");
             gets(timeA);
-            printf("Enter second timming \n");
+            printf("Enter second timing \n");
             gets(timeB);
             tSum = addTime(timeA,timeB);
             printf("The sum is:- Hours: %d & Minutes: %d & Seconds: %d\n\n",tSum.hours,tSum.minutes,tSum.seconds);
