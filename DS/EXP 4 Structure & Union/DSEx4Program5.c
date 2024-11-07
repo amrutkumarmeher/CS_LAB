@@ -27,40 +27,39 @@ int main()
         gets(StuArr[i].course);
         printf("Enter year of joining of the stuent %d: ", i + 1);
         gets(StuArr[i].yearOfJoining);
-    // }
-    printf("\n\n");
-    while (1)
-    {
-        printf("Enter rollno of the desired student or q for quit\n");
-        gets(response);
-        if (response[0]== 'q')
+        // }
+        printf("\n\n");
+        while (1)
         {
-            break;
-        }
-        else
-        {
-            for (i = 0; i < 5; i++)
+            printf("Enter rollno of the desired student or q for quit\n");
+            gets(response);
+            if (response[0] == 'q')
             {
-                if (strcmp(StuArr[i].rollno,response)==0)
+                break;
+            }
+            else
+            {
+                for (i = 0; i < 5; i++)
                 {
-                    printf("\nStudent details:\n");
-                    printf("Name: ");
-                    puts(StuArr[i].name);
-                    printf("Rollno: ");
-                    puts(StuArr[i].rollno);
-                    printf("Dept: ");
-                    puts(StuArr[i].department);
-                    printf("Year of joining: ");
-                    puts(StuArr[i].yearOfJoining);
-                    found = '1';
+                    if (strcmp(StuArr[i].rollno, response) == 0)
+                    {
+                        printf("\nStudent details:\n");
+                        printf("Name: ");
+                        puts(StuArr[i].name);
+                        printf("Rollno: ");
+                        puts(StuArr[i].rollno);
+                        printf("Dept: ");
+                        puts(StuArr[i].department);
+                        printf("Year of joining: ");
+                        puts(StuArr[i].yearOfJoining);
+                        found = '1';
+                    }
                 }
-                
+                if (found == '0')
+                {
+                    printf("\nInvalid stuent details...\n\n");
+                }
             }
-            if (found=='0')
-            {
-                printf("\nInvalid stuent details...\n\n");
-            }
-            
         }
     }
 }
