@@ -1,4 +1,4 @@
-// WAP to make a class with some static members
+// WAP to make a class with some static members.
 class Eclass{
     static int a = 10;
     static int b = 10;

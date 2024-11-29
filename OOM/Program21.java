@@ -1,3 +1,4 @@
+// WAP to use String.replaceAll() function.
 public class Program21 {
     public static void main(String[] args) {
         String sentence = "the quick brown fox jumps over the lazy dog";
