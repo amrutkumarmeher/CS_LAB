@@ -1,4 +1,4 @@
-// Exxperiment 8, WAPTI PivotSort algorithm
+// Experiment 8, WAPTI PivotSort algorithm
 #include <stdio.h>
 void swap(int *a, int *b, int *temp)
 {
