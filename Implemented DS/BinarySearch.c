@@ -18,13 +18,9 @@ int BinarySearch(int element, int size, int a[])
             {
                 right = mid - 1;
             }
-            else if (element > a[mid])
-            {
-                left = mid + 1;
-            }
             else
             {
-                printf("Unexpected condition occure");
+                left = mid + 1;
             }
         }
     }
