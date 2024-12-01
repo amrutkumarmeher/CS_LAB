@@ -44,13 +44,9 @@ int main()
     scanf("%d",&element);
     int indx = BinarySearch(element,size,a);
     if(indx==-1){
-        printf("Element isn't in the array!");
+        printf("This element isn't in the array!");
     }
     else{
-        printf("The position of the element in sorted array is: %d\n",indx);
-        printf("The sorted array:\n");
-        for(int i = 0; i<size;i++){
-            printf("%d ",a[i]);
-        }
+        printf("The position of the element in array is: %d\n",indx);
     }
 }
