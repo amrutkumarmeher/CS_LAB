@@ -18,7 +18,7 @@ int BinarySearch(int element, int size, int a[])
             {
                 right = mid - 1;
             }
-            else
+            else if (element > a[mid])
             {
                 left = mid + 1;
             }
@@ -44,12 +44,12 @@ void bubble_sort(int n, int a[])
 }
 int main()
 {
-    int size,element;
+    int size,element,i;
     printf("Input size of array: ");
     scanf("%d",&size);
     int a[size];
     printf("Enter your array elements\n");
-    for(int i = 0;i<size;i++){
+    for(i = 0;i<size;i++){
         scanf("%d",&a[i]);
     }
     printf("Exter the element you wanna search: ");
@@ -62,7 +62,7 @@ int main()
     else{
         printf("The position of the element in sorted array is: %d\n",indx);
         printf("The sorted array:\n");
-        for(int i = 0; i<size;i++){
+        for(i = 0; i<size;i++){
             printf("%d ",a[i]);
         }
     }

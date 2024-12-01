@@ -1,4 +1,4 @@
-
+// WAP to create a class student & assign some data members & create 2 instances & display them.
 class student{
     String regd;
     int sem;
@@ -14,10 +14,10 @@ class student{
 }
 public class Program12{
     public static void main(String[] args) {
-        student amrut = new student("F23122007001",3, "Amrut Kumar Meher");
-        student homee = new student("F23122007016", 3, "Homee Hiran Bhoi");
-        amrut.display();
-        homee.display();
+        student anuska = new student("F23122005021",3, "Anuska Pradhan");
+        student priya = new student("F23122003200", 3, "Priya Singh");
+        anuska.display();
+        priya.display();
     }
     
 }

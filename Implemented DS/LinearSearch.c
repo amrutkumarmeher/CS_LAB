@@ -19,16 +19,6 @@ int main(){
     for(i = 0;i<n;i++){
         scanf("%d",&a[i]);
     }
-<<<<<<< HEAD
-    printf("Exter the element you wanna search: ");
-    scanf("%d",&element);
-    int indx = BinarySearch(element,size,a);
-    if(indx==-1){
-        printf("This element isn't in the array!");
-    }
-    else{
-        printf("The position of the element in array is: %d\n",indx);
-=======
     printf("Enter the item you wanna search: ");
     scanf("%d",&item);
     pos = LinearSearch(item,n,a);
@@ -36,6 +26,5 @@ int main(){
         printf("Item not found in the array!");
     } else {
         printf("Item found at %d",pos);
->>>>>>> 08cd4e1fe56554c32766d92b8266dc8b4be01c1a
     }
 }

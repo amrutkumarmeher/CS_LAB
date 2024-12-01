@@ -1,3 +1,4 @@
+// WAP to implement constructor overload.
 class Dclass{
     int i;
     int j;

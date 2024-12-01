@@ -1,4 +1,4 @@
-// Exxperiment 8, WAPTI PivotSort algorithm
+// Experiment 8, WAPTI PivotSort algorithm
 #include <stdio.h>
 void swap(int *a, int *b, int *temp)
 {
@@ -42,17 +42,19 @@ void QuickSort(int lowIndx, int highIndx, int *temp, int array[])
 }
 int main()
 {
-    int n,temp;
+    int n, temp,i;
     printf("Enter number of elements in array: ");
-    scanf("%d",&n);
+    scanf("%d", &n);
     int a[n];
     printf("Input elements of array:\n");
-    for(int i = 0; i<n;i++){
-        scanf("%d",&a[i]);
+    for (i = 0; i < n; i++)
+    {
+        scanf("%d", &a[i]);
     }
-    QuickSort(0,n-1,&temp,a);
+    QuickSort(0, n, &temp, a);
     printf("Sorted array: ");
-    for(int i = 0; i<n;i++){
-        printf("%d ",a[i]);
+    for (i = 0; i < n; i++)
+    {
+        printf("%d ", a[i]);
     }
 }
