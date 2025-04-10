@@ -1,6 +1,4 @@
 /*
-Database college.
-
 create database college;
 use std;
 CREATE TABLE employee (
@@ -58,21 +56,14 @@ dept_name varchar(7),
 salary mediumint unsigned,
 dob smallint unsigned
 );
-*/
-
-
-/*
-Database company.
-
 create database company;
-*/
+
 use company;
-/*
 create table employee(
 ID varchar(3) not null,
 FNAME varchar(10) not null,
 LNAME varchar(10) not null,
-DEPT_NAME varchar(2) not null,
+DEPT_NAME varchar(6) not null,
 Salary mediumint unsigned not null,
 DOB date not null,
 gender varchar(6) not null,
@@ -80,8 +71,7 @@ DOJ date not null,
 constraint pk_emp primary key (ID),
 constraint valid_sex check (gender in ('Male', 'Female'))
 );
-*/
-/*
+
 insert into employee (ID,FNAME,LNAME,DEPT_NAME,Salary,DOB,gender,DOJ) values
 ('E1','RAMESH','DAS','CSE',15000,str_to_date('01-05-1987','%d-%m-%Y'),'Male',str_to_date('02-10-2016','%d-%m-%Y')),
 ('E2','RIYA','SAHU','CIVIL',25000,str_to_date('02-09-1986','%d-%m-%Y'),'Female',str_to_date('02-10-2016','%d-%m-%Y')),
@@ -89,18 +79,18 @@ insert into employee (ID,FNAME,LNAME,DEPT_NAME,Salary,DOB,gender,DOJ) values
 ('E4','LOKESH','DAS','MATH',20000,str_to_date('01-10-1989','%d-%m-%Y'),'Male',str_to_date('11-10-2017','%d-%m-%Y')),
 ('E5','AJAY','SAHU','CIVIL',15000,str_to_date('02-10-1987','%d-%m-%Y'),'Male',str_to_date('10-09-2017','%d-%m-%Y')),
 ('E6','BIJAY','DAS','CSE',18000,str_to_date('10-05-1988','%d-%m-%Y'),'Male',str_to_date('11-11-2016','%d-%m-%Y')),
-('E7','SIYA','RAY','MATH',19000,str_to_dept_namedate('26-09-1987','%d-%m-%Y'),'Female',str_to_date('10-10-2017','%d-%m-%Y')),
+('E7','SIYA','RAY','MATH',19000,str_to_date('26-09-1987','%d-%m-%Y'),'Female',str_to_date('10-10-2017','%d-%m-%Y')),
 ('E8','RIYA','PATTANAIK','CSE',12000,str_to_date('25-10-1986','%d-%m-%Y'),'Female',str_to_date('01-05-2016','%d-%m-%Y')),
-('E9','RAM','DAS','CSE',15000,str_to_date('10-01-1987','%d-%m-%Y'),'Male',str_to_date('02-06-2016','%d-%m-%Y')),01
+('E9','RAM','DAS','CSE',15000,str_to_date('10-01-1987','%d-%m-%Y'),'Male',str_to_date('02-06-2016','%d-%m-%Y')),
 ('E10','LAXMAN','MISHRA','CIVIL',18000,str_to_date('11-02-1987','%d-%m-%Y'),'Male',str_to_date('10-05-2017','%d-%m-%Y'));
-
 SELECT 
     fname, dob, doj
 FROM
     employee
 WHERE
     dept_name = 'CIVIL' AND gender = 'Male';
-    
+*/
+EXPLAIN
 SELECT 
     id,
     dept_name,
@@ -109,4 +99,4 @@ FROM
     employee
 WHERE
     dept_name = 'CSE';
-*/
+
