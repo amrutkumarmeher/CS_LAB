@@ -83,12 +83,9 @@ insert into employee (ID,FNAME,LNAME,DEPT_NAME,Salary,DOB,gender,DOJ) values
 ('E8','RIYA','PATTANAIK','CSE',12000,str_to_date('25-10-1986','%d-%m-%Y'),'Female',str_to_date('01-05-2016','%d-%m-%Y')),
 ('E9','RAM','DAS','CSE',15000,str_to_date('10-01-1987','%d-%m-%Y'),'Male',str_to_date('02-06-2016','%d-%m-%Y')),
 ('E10','LAXMAN','MISHRA','CIVIL',18000,str_to_date('11-02-1987','%d-%m-%Y'),'Male',str_to_date('10-05-2017','%d-%m-%Y'));
-<<<<<<< HEAD:DBMS/main.sql
-=======
 
 DELETE FROM employee WHERE dept_name = "MATH";
 
->>>>>>> 0ec034ddf41ff2b07a42612c580da6636c84d043:DBMS/company.sql
 SELECT 
     fname, dob, doj
 FROM
@@ -96,7 +93,7 @@ FROM
 WHERE
     dept_name = 'CIVIL' AND gender = 'Male';
 */
-<<<<<<< HEAD:DBMS/main.sql
+
 EXPLAIN
 SELECT 
     id,
@@ -106,7 +103,5 @@ FROM
     employee
 WHERE
     dept_name = 'CSE';
-=======
 
->>>>>>> 0ec034ddf41ff2b07a42612c580da6636c84d043:DBMS/company.sql
 
