@@ -37,6 +37,20 @@ CREATE TABLE EMP (
 USE company;
 DESC EMP; */
 
-/* Q5. Insert 5 rows to DEPT TABLE */
+/* Q5. Insert 5 rows to DEPT TABLE
 
+USE company;
+INSERT INTO DEPT (DNo, Dname, Location, Mgr_id) values
+("D1","Sales","Location","E3"),
+("D2","Marketing","Sambalpur","E1"),
+("D3","Procurement","Cuttack","E3"),
+("D4","Purchase","Cuttack","E1"),
+("D5","HR","Bhubaneswar","E1"); */
+
+/* Q6. Insert 5 rows to EMP TABLE.*/
+
+USE company;
+INSERT INTO EMP (Eid, Fname, Lname, Job, Hiredate, Salary, Gender) values
+
+;
 
