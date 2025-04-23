@@ -36,14 +36,13 @@ DESC book;
 USE college;
 ALTER TABLE book ADD (
 	date_purchase DATE,
-    department_name enum("CSE", "EEE", "EE", "ME", "CE", "Math & Sci")
+    department_name ENUM("CSE", "EEE", "EE", "ME", "CE", "Math & Sci")
 );
 */
 
-
-/* Q6. Insert 10 books details
+/* Q6. Insert 10 books details */
 USE college;
-INSERT INTO book (No_, Book_name, Author_name, Publication, Edition, date_purchase, department_name) values 
+INSERT INTO book (No_, Book_name, Author_name, Publication, Edition, date_purchase, department_name) VALUES 
 ("B1","Introduction to C","Y. Kanetkar","Pearson",4,str_to_date("10-5-21","%d-%m-%y"),"CSE"),
 ("B2","Approach to C++","T. Kamthane","TMH",5,str_to_date("7-3-22","%d-%m-%y"),"CSE"),
 ("B3","Theory of Algorithm","S. Sharma & P. Mishra","XP7",2,str_to_date("10-10-21","%d-%m-%y"),"CSE"),
@@ -54,7 +53,7 @@ INSERT INTO book (No_, Book_name, Author_name, Publication, Edition, date_purcha
 ("B8","Basic Electrical","J.D. Karni","Pearson",5,str_to_date("10-10-21","%d-%m-%y"),"EE"),
 ("B9","Applied Physics","P.L. Thareja","Pearson",8,str_to_date("7-3-22","%d-%m-%y"),"Math & Sci"),
 ("B10","Estimation Engg","S.K. Ghosh","TMH",5,str_to_date("4-5-18","%d-%m-%y"),"CE");
-*/
+
 
 /* Q7. Delete the book which belong to 4th edition.
 USE college;
